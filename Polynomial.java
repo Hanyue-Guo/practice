@@ -1,6 +1,6 @@
 public class Polynomial {
 	//Array of double
-	double coef[];
+	public double coef[];
 		
 	//no-argument constructor that sets the polynomial to zero 
 	public Polynomial(){
@@ -11,7 +11,7 @@ public class Polynomial {
 	}
 
 	//constructor that takes an array of double as an argument and sets the coefficients accordingly
-	public Polynomial(double setcoef[]){
+	public Polynomial(double[] setcoef){
 		for (int i = 0; i < setcoef.length; i++){
 			coef[i] = setcoef[i];
 		}
@@ -41,9 +41,6 @@ public class Polynomial {
 		for (int i = 0; i < coef.length; i++){
 			finalY += coef[i] * Math.pow(Y, i);
 		}
-		if (finalY == 0)
-			return true;
-		else
-			return false;
+		return (finalY == 0.0);
 	}
 }
